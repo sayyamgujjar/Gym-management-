@@ -1,5 +1,5 @@
 // lib/pages/signup_page.dart
-
+// Signup screen improvements
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
