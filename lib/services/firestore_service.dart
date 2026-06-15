@@ -1,3 +1,4 @@
+// Firebase integration updated
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 import '../models/member.dart';
@@ -19,9 +20,7 @@ class FirestoreService {
   CollectionReference get trainers =>
       db.collection('trainers');
 
-  // =========================================================
-  // MEMBERS
-  // =========================================================
+  
 
   Stream<List<Member>> getMembers() {
 
