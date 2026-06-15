@@ -1,5 +1,5 @@
 // lib/pages/payments_page.dart
-
+// Payment module updated
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
