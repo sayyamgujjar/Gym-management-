@@ -1,3 +1,4 @@
+// Trainer management updated
 class Trainer {
   final String id;
   final String name;
