@@ -1,4 +1,5 @@
-// Member management updated
+// lib/models/member.dart
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class Member {
   final String id;
@@ -19,15 +20,15 @@ class Member {
     required this.expiryDate,
   });
 
-  factory Member.fromMap(Map<String, dynamic> map, String docId) {
+  factory Member.fromMap(String id, Map<String, dynamic> map) {
     return Member(
-      id: docId,
+      id: id,
       name: map['name'] ?? '',
       phone: map['phone'] ?? '',
       email: map['email'] ?? '',
-      plan: map['plan'] ?? '',
-      joinDate: DateTime.parse(map['joinDate']),
-      expiryDate: DateTime.parse(map['expiryDate']),
+      plan: map['plan'] ?? 'Basic',
+      joinDate: (map['joinDate'] as Timestamp).toDate(),
+      expiryDate: (map['expiryDate'] as Timestamp).toDate(),
     );
   }
 
@@ -37,8 +38,8 @@ class Member {
       'phone': phone,
       'email': email,
       'plan': plan,
-      'joinDate': joinDate.toIso8601String(),
-      'expiryDate': expiryDate.toIso8601String(),
+      'joinDate': joinDate,
+      'expiryDate': expiryDate,
     };
   }
 }
