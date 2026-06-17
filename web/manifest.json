@@ -1,6 +1,6 @@
 {
-    "name": "gym_system",
-    "short_name": "gym_system",
+    "name": "project_partone",
+    "short_name": "project_partone",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
